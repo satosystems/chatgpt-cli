@@ -1,0 +1,3 @@
+[submodule "lib/satosystems/libchatgpt"]
+	path = lib/satosystems/libchatgpt
+	url = https://github.com/satosystems/libchatgpt.git
