@@ -17,3 +17,7 @@ add_subdirectory(lib/satosystems/libchatgpt)
 include_directories(lib/satosystems/libchatgpt)
 
 add_executable(chatgpt_cli main.cpp)
+target_link_libraries(chatgpt_cli chatgpt)
+set_target_properties(chatgpt_cli PROPERTIES OUTPUT_NAME chatgpt)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/chatgpt DESTINATION ~/.local/bin)
