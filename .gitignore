@@ -134,3 +134,4 @@ fabric.properties
 # add your custom gitignore here:
 !.gitignore
 !.gitsubmodules
+chatgpt
