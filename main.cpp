@@ -29,8 +29,11 @@ int main(int argc, char *argv[]) {
         ss << ' ' << argv[i];
     }
     std::string content = ss.str();
+    chatgpt_message message;
+    message.role = chatgpt_role_user;
+    message.content = content.c_str();
 
-    chatgpt_completions(api_key, content.c_str(), callback);
+    chatgpt_completions(api_key, 1, &message, callback);
 
     return EXIT_SUCCESS;
 }
